@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل الجمعيات الخيرية - توصيل الأثاث بالرياض</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2a9d8f;
+            --secondary-color: #264653;
+            --accent-color: #e9c46a;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --success-color: #28a745;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f5f7fa;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .logo span {
+            color: var(--accent-color);
+        }
+        
+        .tagline {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+        
+        /* Main Content */
+        .hero {
+            background-color: white;
+            margin: 2rem 0;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .hero h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .hero p {
+            color: #555;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .feature h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Associations Section */
+        .associations-container {
+            margin: 2rem 0;
+        }
+        
+        .section-title {
+            color: var(--secondary-color);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .associations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .association-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+        
+        .association-card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .association-name {
+            font-weight: 600;
+            font-size: 1.2rem;
+            flex: 1;
+        }
+        
+        .copy-all-icon {
+            background-color: transparent;
+            color: white;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .copy-all-icon:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.2rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .phone-number {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn {
+            padding: 8px 15px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-copy {
+            background-color: #e7f5ff;
+            color: var(--primary-color);
+        }
+        
+        .btn-copy:hover {
+            background-color: #d0ebff;
+        }
+        
+        .btn-call {
+            background-color: var(--success-color);
+            color: white;
+        }
+        
+        .btn-call:hover {
+            background-color: #218838;
+        }
+        
+        .card-footer {
+            background-color: #f8f9fa;
+            padding: 1rem 1.5rem;
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .contact-footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .copyright {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--success-color);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .associations-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+            
+            .action-buttons {
+                align-self: flex-end;
+            }
+            
+            .hero {
+                padding: 1.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-hands-helping"></i>
+                <div>
+                    <h1>خدمة <span>توصيل الأثاث</span> الخيري</h1>
+                    <div class="tagline">من بيتك إلى الجمعيات الخيرية بالرياض</div>
+                </div>
+            </div>
+            <div class="contact-header">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <div style="font-size: 0.9rem;">للتواصل والاستفسار</div>
+                        <div style="font-weight: 700; font-size: 1.2rem;">0559836277</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>نوفر خدمة توصيل الأثاث المستعمل بالرياض إلى الجمعيات الخيرية بكل سهولة 🚚</h2>
+            <p>نساعدك في إيصال تبرعاتك من الأثاث المستعمل إلى الجمعيات الخيرية بالرياض. نستلم من منزلك ونوصل للجمعية مباشرة، براحة لك وأجر لك.</p>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="feature">
+                <i class="fas fa-truck"></i>
+                <h3>نقل سريع وآمن</h3>
+                <p>نقوم بنقل وتوصيل الأثاث بأعلى معايير الأمان والسرعة</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>لجميع الجمعيات</h3>
+                <p>نوصل تبرعاتك لكل الجمعيات الخيرية في الرياض</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-city"></i>
+                <h3>جميع أحياء الرياض</h3>
+                <p>نغطي جميع مناطق وأحياء مدينة الرياض</p>
+            </div>
+        </section>
+
+        <!-- Associations Section -->
+        <section class="associations-container">
+            <h2 class="section-title">الجمعيات الخيرية المتعاونة (20 جمعية)</h2>
+            
+            <div class="associations-grid" id="associationsContainer">
+                <!-- Association cards will be generated here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="logo">
+                <i class="fas fa-hands-helping"></i>
+                <h2>خدمة توصيل الأثاث الخيري</h2>
+            </div>
+            
+            <p>نحن هنا لنساعدك في توصيل تبرعاتك من الأثاث المستعمل إلى الجمعيات الخيرية بالرياض</p>
+            
+            <div class="contact-footer">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>0559836277</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>جميع أحياء الرياض</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <span>خدمة 24/7</span>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                © 2023 خدمة توصيل الأثاث الخيري بالرياض. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">تم النسخ بنجاح!</span>
+    </div>
+
+    <script>
+        // Association data - جميع الـ 20 جمعية
+        const associations = [
+            {
+                name: "توصيل أثاث جمعية خيرية بالرياض",
+                phone: "0559836277",
+                description: "تأخذ أثاث مستعمل بالرياض - نوفر خدمة توصيل الأثاث المستعمل بالرياض إلى الجمعيات الخيرية بكل سهولة 🚚"
+            },
+            {
+                name: "خدمة نقل الأثاث للجمعيات الخيرية",
+                phone: "0559836277",
+                description: "عندك أثاث وتبغى توصله لجمعية خيرية؟ نحن نوصله عنك داخل الرياض 🤍"
+            },
+            {
+                name: "توصيل الأثاث المستعمل بالرياض",
+                phone: "0559836277",
+                description: "خدمة نقل وتوصيل الأثاث للجمعيات الخيرية بالرياض - سريع وآمن"
+            },
+            {
+                name: "نقل وتوصيل الأثاث الخيري",
+                phone: "0559836277",
+                description: "وفر وقتك وجهدك 🙏 نقوم بتوصيل الأثاث نيابة عنك للجمعيات الخيرية"
+            },
+            {
+                name: "خدمة توصيل الأثاث للجمعيات",
+                phone: "0559836277",
+                description: "توصيل الأثاث المستعمل إلى الجمعيات الخيرية داخل الرياض - اتصل الآن"
+            },
+            {
+                name: "أثاثك صدقة... ونحن نوصله",
+                phone: "0559836277",
+                description: "نساعدك في إيصال تبرعك للأسر المحتاجة - خدمة توصيل أثاث بالرياض"
+            },
+            {
+                name: "نقل وتوصيل الأثاث المستعمل للجمعيات الخيرية",
+                phone: "0559836277",
+                description: "باحترافية عالية داخل مدينة الرياض"
+            },
+            {
+                name: "خدمة توصيل الأثاث الخيري بالرياض",
+                phone: "0559836277",
+                description: "راحة لك وأجر لك - نوصل تبرعاتك للجمعيات"
+            },
+            {
+                name: "توصيل الكنب والغرف للجمعيات",
+                phone: "0559836277",
+                description: "عندك كنب أو غرفة نوم وتبغى توصلها؟ نستلم ونوصل للجمعيات الخيرية"
+            },
+            {
+                name: "توصيل الأثاث لجميع أحياء الرياض",
+                phone: "0559836277",
+                description: "نغطي جميع أحياء الرياض - توصيل الأثاث للجمعيات الخيرية"
+            },
+            {
+                name: "نقل أثاث خيري داخل الرياض",
+                phone: "0559836277",
+                description: "خل تبرعك يوصل بأمان - خدمة موثوقة لنقل الأثاث"
+            },
+            {
+                name: "خدمة موثوقة لتوصيل الأثاث",
+                phone: "0559836277",
+                description: "نرتب وننقل الأثاث للجمعيات الخيرية - خدمة موثوقة واحترافية"
+            },
+            {
+                name: "لا تشيل هم النقل 🚚",
+                phone: "0559836277",
+                description: "نقوم بتوصيل الأثاث للجمعيات الخيرية بالرياض - وفر جهدك ووقتك"
+            },
+            {
+                name: "خدمة توصيل أثاث خيري بأسعار مناسبة",
+                phone: "0559836277",
+                description: "الرياض - أسعار تنافسية لخدمات النقل والتوصيل"
+            },
+            {
+                name: "نوصلك بالخير 🌱",
+                phone: "0559836277",
+                description: "توصيل الأثاث المستعمل للجمعيات - نساعدك في إيصال الخير"
+            },
+            {
+                name: "من بيتك للجمعية مباشرة",
+                phone: "0559836277",
+                description: "خدمة توصيل أثاث بالرياض - نأخذ من منزلك ونوصل للجمعية"
+            },
+            {
+                name: "أثاثك يوصل لمستحقيه بإذن الله",
+                phone: "0559836277",
+                description: "نقل خيري بالرياض - ضمان وصول تبرعاتك للمستحقين"
+            },
+            {
+                name: "خدمة سريعة وملتزمة",
+                phone: "0559836277",
+                description: "توصيل الأثاث للجمعيات الخيرية - التزام بالمواعيد والجودة"
+            },
+            {
+                name: "تبرعك علينا توصيله",
+                phone: "0559836277",
+                description: "اتصل الآن - نحن نتولى عملية النقل والتوصيل بالكامل"
+            },
+            {
+                name: "خدمة شاملة للتوصيل الخيري",
+                phone: "0559836277",
+                description: "جميع أنواع الأثاث - جميع مناطق الرياض - خدمة متكاملة"
+            }
+        ];
+
+        // DOM elements
+        const associationsContainer = document.getElementById('associationsContainer');
+        const toast = document.getElementById('toast');
+        const toastMessage = document.getElementById('toastMessage');
+
+        // Function to show toast notification
+        function showToast(message) {
+            toastMessage.textContent = message;
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Function to copy text to clipboard
+        function copyToClipboard(text, message) {
+            navigator.clipboard.writeText(text)
+                .then(() => {
+                    showToast(message);
+                })
+                .catch(err => {
+                    console.error('Failed to copy: ', err);
+                    showToast('فشل النسخ، حاول مرة أخرى');
+                });
+        }
+
+        // Function to create association card
+        function createAssociationCard(association, index) {
+            const card = document.createElement('div');
+            card.className = 'association-card';
+            card.innerHTML = `
+                <div class="card-header">
+                    <div class="association-name">${association.name}</div>
+                    <button class="copy-all-icon" data-index="${index}" title="نسخ معلومات الجمعية">
+                        <i class="far fa-copy"></i>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div class="contact-info">
+                        <div class="phone-number">${association.phone}</div>
+                        <div class="action-buttons">
+                            <button class="btn btn-copy copy-phone-btn" data-phone="${association.phone}">
+                                <i class="far fa-copy"></i>
+                                نسخ الرقم
+                            </button>
+                            <a href="tel:${association.phone}" class="btn btn-call">
+                                <i class="fas fa-phone-alt"></i>
+                                اتصل الآن
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    ${association.description}
+                </div>
+            `;
+            
+            return card;
+        }
+
+        // Function to handle copy all button click
+        function handleCopyAll(index) {
+            const association = associations[index];
+            const textToCopy = `اسم الجمعية: ${association.name}\nرقم الجوال: ${association.phone}\n${association.description}`;
+            copyToClipboard(textToCopy, 'تم نسخ معلومات الجمعية بنجاح!');
+        }
+
+        // Function to handle copy phone button click
+        function handleCopyPhone(phone) {
+            copyToClipboard(phone, 'تم نسخ رقم الجوال بنجاح!');
+        }
+
+        // Initialize the page
+        function init() {
+            // Generate association cards
+            associations.forEach((association, index) => {
+                const card = createAssociationCard(association, index);
+                associationsContainer.appendChild(card);
+            });
+            
+            // Add event listeners for copy all buttons
+            document.querySelectorAll('.copy-all-icon').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const index = e.currentTarget.getAttribute('data-index');
+                    handleCopyAll(index);
+                });
+            });
+            
+            // Add event listeners for copy phone buttons
+            document.querySelectorAll('.copy-phone-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const phone = e.currentTarget.getAttribute('data-phone');
+                    handleCopyPhone(phone);
+                });
+            });
+        }
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
